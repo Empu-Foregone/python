@@ -1,42 +1,42 @@
 import math
 
 def calculate_function(m):
-  """Розраховує значення функції за заданою формулою.
+  """Calculates the value of the function according to the given formula.
 
   Args:
-    m: Значення змінної m.
+    m: Value of m.
 
   Returns:
-    Значення функції.
+    Value of Function.
   """
 
   result = 1 / math.sqrt(m**2 - 1)
   return result
 
 def calculate_total_distance(n):
-  """Розраховує загальний шлях, який пробіжить спортсмен за n днів.
+  """Calculates the total distance that the athlete will run in n days.
 
   Args:
-    n: Кількість днів.
+    n: Number of Days.
 
   Returns:
-    Загальна відстань.
+    Full distance.
   """
 
-  distance = 10  # Початкова відстань
+  distance = 10  
   total_distance = 0
   for _ in range(n):
     total_distance += distance
-    distance *= 1.1  # Збільшення відстані на 10%
+    distance *= 1.1  
   return total_distance
 
 if __name__ == "__main__":
   # Задача 1
-  m = float(input("Введіть значення m: "))
+  m = float(input("Enter value of m: "))
   result = calculate_function(m)
-  print("Результат обчислення функції:", result)
+  print("The result of the calculation of the function:", result)
 
   # Задача 2
-  n = int(input("Введіть кількість днів: "))
+  n = int(input("enter the nemuber of days: "))
   total_distance = calculate_total_distance(n)
-  print("Загальна відстань, яку пробіжить спортсмен:", total_distance, "км")
+  print("The total distance that the athlete will run:", total_distance, "km")
