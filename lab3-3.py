@@ -1,21 +1,21 @@
 def count_words_starting_with_n(sentence):
-  """Підраховує кількість слів у реченні, які починаються з літери "н".
+  """Counts the number of words in a sentence that start with the letter "n".
 
   Args:
-    sentence: Вхідне речення.
+    sentence: Incoming sentence.
 
   Returns:
-    Кількість слів, що починаються з "н".
+    Number of words starting with "n".
   """
 
-  words = sentence.split()  # Розділити речення на слова
+  words = sentence.split()  
   count = 0
   for word in words:
-    if word.lower().startswith('н'):  # Перевіряємо першу літеру в нижньому регістрі
+    if word.lower().startswith('n'): 
       count += 1
   return count
 
 if __name__ == "__main__":
-  sentence = input("Введіть речення: ")
+  sentence = input("Enter a sentence: ")
   result = count_words_starting_with_n(sentence)
-  print("Кількість слів, що починаються з 'н':", result)
+  print("Number of words starting with 'n':", result)
