@@ -1,8 +1,8 @@
 def print_pattern(n):
-  """Виводить на екран візерунок з чисел від 1 до N.
+  """Enters the pyramid from 1 to N.
 
   Args:
-    n: Ціле число, що визначає розмір візерунка.
+    n: Number that means size of array.
   """
 
   if not 1 < n < 9:
