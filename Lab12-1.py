@@ -6,7 +6,7 @@ countries_data = [
     {"name": "China", "area": 9596961, "population": 1393409038, "continent": "Asia"},
     {"name": "USA", "area": 9833517, "population": 331893745, "continent": "North America"},
     {"name": "India", "area": 3287263, "population": 1366417754, "continent": "Asia"},
-    {"name": "Russia", "area": 17098242, "population": 145912025, "continent": "Europe"},
+    {"name": "Belgium", "area": 30688, "population": 11820000, "continent": "Europe"},
     {"name": "Canada", "area": 9984670, "population": 38005238, "continent": "North America"},
     {"name": "Brazil", "area": 8515767, "population": 212559417, "continent": "South America"},
     {"name": "Egypt", "area": 1002450, "population": 91250000, "continent": "Africa"},
