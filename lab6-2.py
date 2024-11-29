@@ -20,13 +20,10 @@ def find_subsequence(lst, subsequence):
       return i
   return -1
 
-# Отримання списку від користувача
 my_list = list(map(int, input("Введіть елементи списку через пробіл: ").split()))
 
-# Отримання послідовності для пошуку
 subsequence = list(map(int, input("Введіть послідовність для пошуку через пробіл: ").split()))
 
-# Виклик функції та друк результату
 result = find_subsequence(my_list, subsequence)
 if result != -1:
   print("Послідовність знайдена, починаючи з індексу:", result)
