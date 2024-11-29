@@ -1,11 +1,11 @@
 def create_matrix(n):
-  """Створює матрицю розміром n x n за заданим шаблоном.
+  """Creates an n x n matrix according to the given pattern.
 
   Args:
-    n: Розмір матриці.
+    n: sive of matrix.
 
   Returns:
-    Двовимірний масив, заповнений відповідно до шаблону.
+    A two-dimensional array filled according to a pattern.
   """
 
   matrix = [[0] * n for _ in range(n)]
@@ -16,12 +16,10 @@ def create_matrix(n):
 
   return matrix
 
-# Виведення матриці на екран
 def print_matrix(matrix):
   for row in matrix:
     print(*row)
 
-# Приклад використання
 n = 7
 matrix = create_matrix(n)
 print_matrix(matrix)
