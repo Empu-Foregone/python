@@ -1,6 +1,6 @@
 import json
 
-# Sample countries data
+
 countries_data = [
     {"name": "Nigeria", "area": 923768, "population": 206700000, "continent": "Africa"},
     {"name": "China", "area": 9596961, "population": 1393409038, "continent": "Asia"},
@@ -14,12 +14,10 @@ countries_data = [
     {"name": "South Korea", "area": 100210, "population": 51329899, "continent": "Asia"}
 ]
 
-# Function to save the data into a JSON file
 def save_to_json(data, filename="countries.json"):
     with open(filename, "w") as file:
         json.dump(data, file, indent=4)
 
-# Function to load data from the JSON file
 def load_from_json(filename="countries.json"):
     try:
         with open(filename, "r") as file:
@@ -27,7 +25,6 @@ def load_from_json(filename="countries.json"):
     except FileNotFoundError:
         return []
 
-# Function to display the contents of the JSON file
 def display_json():
     countries = load_from_json()
     if countries:
@@ -37,7 +34,6 @@ def display_json():
     else:
         print("No data available.")
 
-# Function to add a new country to the JSON file
 def add_country():
     name = input("Enter country name: ")
     area = int(input("Enter country area (in square km): "))
@@ -52,7 +48,6 @@ def add_country():
 
     print(f"Country {name} added successfully.")
 
-# Function to remove a country from the JSON file
 def remove_country():
     name = input("Enter the name of the country to remove: ")
 
@@ -62,7 +57,6 @@ def remove_country():
     save_to_json(countries)
     print(f"Country {name} removed successfully.")
 
-# Function to search for countries by a specific field
 def search_country():
     field = input("Enter the field to search by (name, area, population, continent): ").lower()
     value = input("Enter the value to search for: ")
@@ -80,8 +74,7 @@ def search_country():
             print(country)
     else:
         print("No countries found with that search criteria.")
-
-# Function to check and print countries located in Africa or Asia
+        
 def check_africa_asia():
     countries = load_from_json()
     found = False
@@ -92,7 +85,6 @@ def check_africa_asia():
     if not found:
         print("No countries are located in Africa or Asia.")
 
-# Main function to interact with the user
 def main():
     while True:
         print("\nMenu:")
@@ -122,6 +114,6 @@ def main():
             print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
-    # Initially saving the sample countries data to the JSON file
+
     save_to_json(countries_data)
     main()
