@@ -17,15 +17,15 @@ fixed_df.head(3)
 # Додавання стовпця "Month" для групування за місяцем
 fixed_df['Month'] = fixed_df.index.month
 
-# Агрегація даних за місяцями
+# Агрегація даних за місяцямиi
 monthly_counts = fixed_df.groupby('Month').sum()
 
 # Визначення місяця з найбільшою кількістю велосипедистів
-most_popular_month = monthly_counts['Berri 1'].idxmax()
+most_popular_month = monthly_counts['Berri1'].idxmax()
 print(f'Найбільш популярний місяць у велосипедистів: {most_popular_month}')
 
 # Візуалізація даних
-monthly_counts['Berri 1'].plot(kind='bar', color='skyblue')
+monthly_counts['Berri1'].plot(kind='bar', color='skyblue')
 plt.xlabel('Місяць')
 plt.ylabel('Кількість велосипедистів')
 plt.title('Кількість велосипедистів за місяцями у 2018 році')
